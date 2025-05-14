@@ -1,0 +1,1139 @@
+/* Estilos generales - Tema Kali Linux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Kali Linux específicos */
+.kali-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.kali-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #32b232;
+    margin-bottom: 20px;
+}
+
+.header-bar .kali-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px 0 0;
+}
+
+.header-bar h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.user-info {
+    color: #00b3b3;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.user-info i {
+    margin-right: 8px;
+}
+
+.footer-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    color: #666;
+    font-size: 12px;
+}
+
+.terminal-prompt {
+    margin-top: 30px;
+    background-color: #000;
+    border-radius: 3px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+.prompt-line {
+    color: #00b3b3;
+    display: inline;
+}
+
+.prompt-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #00b3b3;
+    vertical-align: middle;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Estilos del login - Tema Kali Linux */
+.login-container {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #0cedaf;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #cccccc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0cedaf;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: 2px solid #0cedaf;
+}
+
+.btn-submit {
+    background-color: #0cedaf;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0ba885;
+}
+
+.error-message {
+    color: #ff5555;
+    margin-bottom: 15px;
+    text-align: center;
+    display: none;
+}
+
+/* Estilos para el examen - Tema Kali Linux */
+.exam-container {
+    background-color: #212121;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border: 1px solid #32b232;
+}
+
+.timer {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff5555;
+    font-weight: bold;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    border-left: 3px solid #ff5555;
+}
+
+.section-title {
+    background-color: #333;
+    color: #32b232;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin: 30px 0 15px;
+    border-left: 3px solid #32b232;
+}
+
+.question {
+    margin-bottom: 25px;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 3px;
+    border-left: 4px solid #00b3b3;
+}
+
+.question p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #00b3b3;
+}
+
+.description {
+    color: #c8c8c8;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.options label {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #c8c8c8;
+    border-radius: 3px;
+}
+
+.options label:hover {
+    background-color: #333;
+}
+
+.options input[type="radio"],
+.options input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+    accent-color: #32b232;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #c8c8c8;
+    border: 1px solid #444;
+    border-radius: 3px;
+    min-height: 100px;
+    font-size: 14px;
+    margin-top: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+textarea:focus {
+    border-color: #32b232;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+/* Estilos para campos de texto (preguntas de respuesta corta) */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #c8c8c8;
+    border: 1px solid #444;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    margin-top: 8px;
+    height: 40px;
+}
+
+input[type="text"]:focus {
+    border-color: #32b232;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+/* Estilos específicos para las preguntas de comandos */
+.question input[type="text"] {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #00ff00;
+}
+
+/* Estilo específico para preguntas de comandos de Linux */
+.command-question {
+    position: relative;
+}
+
+.command-question input[type="text"] {
+    padding-left: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #32b232;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    height: 45px;
+}
+
+.command-question::before {
+    content: "$";
+    position: absolute;
+    left: 10px;
+    top: 19px;
+    color: #00ff00;
+    font-weight: bold;
+    font-family: 'Ubuntu Mono', monospace;
+    z-index: 1;
+}
+
+/* Estilo específico para cuando el usuario escribe en el campo */
+.command-question input[type="text"]:focus {
+    background-color: #111;
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.submit-exam {
+    background-color: #ff5555;
+    margin-top: 30px;
+    color: #000;
+}
+
+.submit-exam:hover {
+    background-color: #ff7777;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-button {
+    padding: 8px 15px;
+    background-color: #444;
+    color: #c8c8c8;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-button i {
+    margin: 0 5px;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+.nav-button:disabled {
+    background-color: #333;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Estilos para los resultados */
+.correct-answer { 
+    color: #32b232; 
+}
+
+.incorrect-answer { 
+    color: #ff5555; 
+}
+
+.user-text-answer { 
+    background-color: #333; 
+    padding: 10px; 
+    border-radius: 3px; 
+    margin: 5px 0 15px;
+    white-space: pre-wrap;
+    border-left: 3px solid #00b3b3;
+}
+
+.answers-summary {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.answer-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #444;
+}
+
+/* Terminal-like inputs */
+input[type="text"] {
+    font-family: 'Courier New', monospace;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .login-container, .exam-container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .timer {
+        font-size: 18px;
+    }
+    
+    .options label {
+        padding: 10px;
+    }
+    
+    .nav-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        padding: 12px;
+    }
+    
+    .header-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-bar .kali-logo {
+        margin: 0 0 10px 0;
+    }
+    
+    .header-bar h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .user-info {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    
+    .login-container, .exam-container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    .question p {
+        font-size: 14px;
+    }
+    
+    .options label {
+        font-size: 14px;
+    }
+    
+    .timer {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    input, textarea {
+        font-size: 14px;
+    }
+    
+    .nav-button i {
+        margin: 0 3px;
+    }
+    
+    .terminal-prompt {
+        font-size: 12px;
+    }
+}
+
+/* Estilo para el loader de evaluación de IA */
+.loading-evaluation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #c8c8c8;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid #32b232;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.progress-bar {
+    width: 300px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #32b232;
+    transition: width 0.3s ease;
+}
+
+/* Estilos para los resultados de la evaluación de IA */
+.ai-feedback {
+    background-color: #1a1a1a;
+    border-left: 3px solid #32b232;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.ai-score {
+    display: inline-block;
+    background-color: #333;
+    color: #32b232;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Estilos para los botones de PDF */
+.pdf-button {
+    background-color: #ff5555;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-button i {
+    margin-right: 8px;
+}
+
+.pdf-button:hover {
+    background-color: #ff7777;
+}
+
+/* Certificado mejorado */
+.certificate {
+    background-color: #fff;
+    color: #000;
+    padding: 50px;
+    border: 15px solid #32b232;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-header {
+    margin-bottom: 20px;
+}
+
+.certificate-header img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+}
+
+.certificate-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: none;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.certificate-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #32b232;
+}
+
+.certificate-student {
+    font-size: 32px;
+    color: #32b232;
+    margin: 30px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.certificate-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto 30px;
+    max-width: 80%;
+    color: #444;
+    font-family: 'Arial', sans-serif;
+}
+
+.certificate-score {
+    font-size: 26px;
+    color: #32b232;
+    margin: 25px 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #32b232;
+    border-radius: 8px;
+    background-color: rgba(50, 178, 50, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.certificate-date {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #777;
+    font-family: 'Arial', sans-serif;
+}
+
+.certificate-footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.certificate-signature {
+    text-align: center;
+    width: 40%;
+}
+
+.signature-line {
+    width: 80%;
+    height: 1px;
+    background-color: #000;
+    margin: 0 auto 15px;
+}
+
+.certificate-signature p:first-of-type {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.certificate-signature p:last-of-type {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.certificate-seal {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 130px;
+    height: 130px;
+    border: 3px solid #32b232;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg);
+    color: #32b232;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    line-height: 1.4;
+    background-color: rgba(50, 178, 50, 0.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos para la ventana modal personalizada */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-window {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-window h3 {
+    color: #0cedaf;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-window p {
+    margin-bottom: 15px;
+    color: #d9d9d9;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #3c3c3c;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.auth-input:focus {
+    outline: 2px solid #0cedaf;
+}
+
+.modal-close-btn {
+    background-color: #0cedaf;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.modal-close-btn:hover {
+    background-color: #0ba885;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Estilos de la terminal */
+.terminal-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    font-family: 'Ubuntu Mono', monospace;
+    z-index: 9999 !important;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.terminal-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2e2e;
+    height: 30px;
+    padding: 0 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.terminal-title {
+    color: #ddd;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-minimize, .terminal-maximize, .terminal-close {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.terminal-minimize {
+    background-color: #ffbd4c;
+}
+
+.terminal-maximize {
+    background-color: #00ca56;
+}
+
+.terminal-close {
+    background-color: #ff5f56;
+}
+
+.terminal-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #0c0c0c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: calc(100% - 30px);
+    scroll-behavior: smooth;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Salida de la terminal */
+.terminal-output {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Comando ejecutado */
+.terminal-command {
+    margin: 4px 0;
+    white-space: nowrap;
+}
+
+/* Estilos de colores para directorios y archivos */
+.Escritorio, .Documentos, .Descargas {
+    color: #58c2e5 !important;
+    font-weight: bold;
+}
+
+.notas-txt {
+    color: #f4bd4c !important;
+}
+
+/* Prompt de la terminal */
+.terminal-prompt {
+    color: #00bfff;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Texto del comando */
+.terminal-command-text {
+    color: #fff;
+}
+
+/* Línea de entrada */
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+/* Campo de entrada */
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    line-height: normal;
+    padding: 0;
+}
+
+/* Colores para tipos de mensajes */
+.terminal-welcome {
+    color: #75c050;
+    margin-bottom: 10px;
+}
+
+.terminal-error {
+    color: #ff5555;
+}
+
+.terminal-success {
+    color: #75c050;
+}
+
+.terminal-warning {
+    color: #f4bd4c;
+}
+
+.terminal-info {
+    color: #58c2e5;
+}
+
+/* Estilos para la ayuda */
+.terminal-help {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px 20px;
+}
+
+.terminal-help-command {
+    color: #f4bd4c;
+    white-space: nowrap;
+}
+
+.terminal-help-description {
+    color: #bbb;
+}
+
+.terminal-command-output {
+    color: #ddd;
+    margin: 5px 0;
+}
+
+/* Estilo específico para directorios */
+.terminal-command-output span.terminal-info {
+    color: #58c2e5;
+    font-weight: bold;
+}
+
+/* Estilo específico para archivos */
+.terminal-command-output span.terminal-warning {
+    color: #f4bd4c;
+}
+
+/* Estilos para el directorio escritorio */
+.terminal-command-output span.terminal-info:contains("Escritorio") {
+    color: #00bfff;
+}
+
+/* Resultado de la salida de comandos */
+.terminal-output-result {
+    margin: 5px 0 10px 0;
+    color: #ddd;
+}
+
+/* Botón para abrir la terminal */
+.terminal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #3a3a3a 0%, #2c2c2c 100%);
+    color: #ddd;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.terminal-btn:hover {
+    background: linear-gradient(180deg, #444444 0%, #333333 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-btn i {
+    margin-right: 6px;
+}
+
+/* Estilo para contenido de archivos */
+.file-content {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-left: 3px solid #58c2e5;
+    margin: 5px 0 10px 0;
+    overflow-x: auto;
+}
+
+.file-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+
+/* Estilo para archivos ocultos */
+.hidden-file {
+    color: #666 !important;
+}
+
+/* Fix para asegurar el scroll automático */
+.terminal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #0c0c0c;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 5px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Estudio y botones de terminal */
+.study-materials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.study-link {
+    flex: 1;
+    padding: 12px 15px;
+    background-color: #333;
+    color: #0cedaf;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.study-link:hover {
+    background-color: #444;
+}
+
+.study-link i {
+    margin-right: 8px;
+}
+
+.terminal-btn {
+    flex: 1;
+    padding: 12px 15px;
+    background: linear-gradient(180deg, #3a3a3a 0%, #2c2c2c 100%);
+    color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terminal-btn:hover {
+    background: linear-gradient(180deg, #444444 0%, #333333 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-btn i {
+    margin-right: 8px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .study-materials {
+        flex-direction: column;
+    }
+    
+    .terminal-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Resto de estilos de la página */

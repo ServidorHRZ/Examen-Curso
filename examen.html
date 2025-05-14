@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+    <title>Examen de Ciberseguridad | Kali Linux</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/gemini-api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="exam-container">
+            <div class="header-bar">
+                <img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali Linux" class="kali-logo">
+                <h1>Examen Básico de Ciberseguridad</h1>
+                <div class="user-info">
+                    <i class="fas fa-id-card"></i> <span id="nombreCompleto">Estudiante</span>
+                </div>
+            </div>
+            <div class="timer" id="timer">Tiempo restante: 01:30:00</div>
+            
+            <div id="examContent">
+                <!-- Aquí se cargará el contenido del examen -->
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="prevButton" class="nav-button" disabled><i class="fas fa-chevron-left"></i> Anterior</button>
+                <button id="nextButton" class="nav-button">Siguiente <i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <button id="submitExam" class="btn-submit submit-exam" style="display: none;"><i class="fas fa-check-circle"></i> Finalizar Examen</button>
+            
+            <div class="footer-bar">
+                <div class="kali-info">Powered by Kali Linux</div>
+                <div class="exam-version">Versión 1.0</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/examen.js"></script>
+</body>
+</html> 

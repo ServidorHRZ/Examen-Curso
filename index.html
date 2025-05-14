@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+    <title>Login | Examen de Ciberseguridad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="kali-header">
+                <img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali Linux" class="kali-logo">
+            </div>
+            <h1>Examen de Ciberseguridad</h1>
+            <h2>Inicio de Sesión</h2>
+            <div id="errorMessage" class="error-message"></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="nombreCompleto"><i class="fas fa-id-card"></i> Nombre Completo:</label>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" required placeholder="Ingresa tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Usuario:</label>
+                    <input type="text" id="username" name="username" required placeholder="Ingresa tu usuario">
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
+                    <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="submit" class="btn-submit"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+            </form>
+            
+            <div class="study-materials">
+                <a href="#" id="studyMaterialLink" class="study-link"><i class="fas fa-book"></i> Material de Estudio</a>
+                <button id="openTerminal" class="terminal-btn"><i class="fas fa-terminal"></i> Terminal Kali Linux</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Terminal como ventana emergente -->
+    <div id="terminalWindow" class="terminal-window">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali" width="16" height="16" style="vertical-align: middle; margin-right: 6px;">
+                    Terminal Kali Linux
+                </div>
+                <div class="terminal-controls">
+                    <span class="terminal-minimize"></span>
+                    <span class="terminal-maximize"></span>
+                    <span class="terminal-close" id="closeTerminal"></span>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-output" id="terminal-output"></div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">user@kali:~$</span>
+                    <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/login.js"></script>
+    <script src="js/terminal.js"></script>
+    <script>
+        // Control de acceso al material de estudio
+        document.getElementById('studyMaterialLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Crear y mostrar el diálogo de autenticación
+            const modalOverlay = document.createElement('div');
+            modalOverlay.className = 'modal-overlay';
+            
+            const modalWindow = document.createElement('div');
+            modalWindow.className = 'modal-window';
+            modalWindow.innerHTML = `
+                <h3>Acceso Restringido</h3>
+                <div id="auth-content">
+                    <p>Este material está protegido. Por favor, identifíquese:</p>
+                    <div class="form-group">
+                        <label for="auth-username"><i class="fas fa-user"></i> Usuario:</label>
+                        <input type="text" id="auth-username" placeholder="Ingresa tu usuario" class="auth-input">
+                    </div>
+                    <button id="auth-continue" class="modal-close-btn">Continuar</button>
+                </div>
+                <div id="auth-error" style="display: none; color: #ff5555; margin: 10px 0;"></div>
+            `;
+            
+            modalOverlay.appendChild(modalWindow);
+            document.body.appendChild(modalOverlay);
+            
+            // Auto-focus en el campo de usuario
+            setTimeout(() => document.getElementById('auth-username').focus(), 100);
+            
+            // Manejar el click en continuar
+            document.getElementById('auth-continue').addEventListener('click', function() {
+                const username = document.getElementById('auth-username').value.trim();
+                
+                if (username === 'Mr.Robot') {
+                    // Si el usuario es correcto, pedir contraseña
+                    document.getElementById('auth-content').innerHTML = `
+                        <p>Bienvenido, ${username}. Por favor ingrese su contraseña:</p>
+                        <div class="form-group">
+                            <label for="auth-password"><i class="fas fa-lock"></i> Contraseña:</label>
+                            <input type="password" id="auth-password" placeholder="Ingresa tu contraseña" class="auth-input">
+                        </div>
+                        <button id="auth-submit" class="modal-close-btn">Acceder</button>
+                    `;
+                    
+                    // Auto-focus en el campo de contraseña
+                    setTimeout(() => document.getElementById('auth-password').focus(), 100);
+                    
+                    // Manejar el click en acceder
+                    document.getElementById('auth-submit').addEventListener('click', function() {
+                        const password = document.getElementById('auth-password').value.trim();
+                        
+                        if (password === '01010') {
+                            // Si la contraseña es correcta, abrir el material
+                            window.open('hackme.txt', '_blank');
+                            modalOverlay.remove();
+                        } else {
+                            // Mostrar error
+                            document.getElementById('auth-error').style.display = 'block';
+                            document.getElementById('auth-error').textContent = 'Contraseña incorrecta. Acceso denegado.';
+                        }
+                    });
+                    
+                    // También permitir enviar con Enter
+                    document.getElementById('auth-password').addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter') {
+                            document.getElementById('auth-submit').click();
+                        }
+                    });
+                    
+                } else {
+                    // Mostrar error
+                    document.getElementById('auth-error').style.display = 'block';
+                    document.getElementById('auth-error').textContent = 'Usuario no autorizado. Acceso denegado.';
+                }
+            });
+            
+            // También permitir enviar con Enter
+            document.getElementById('auth-username').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('auth-continue').click();
+                }
+            });
+            
+            // Cerrar modal haciendo clic fuera
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) {
+                    modalOverlay.remove();
+                }
+            });
+        });
+
+        // Asegurar que el botón de terminal funcione correctamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const openTerminalBtn = document.getElementById('openTerminal');
+            const terminalWindow = document.getElementById('terminalWindow');
+            const closeTerminalBtn = document.getElementById('closeTerminal');
+            
+            if (openTerminalBtn) {
+                openTerminalBtn.addEventListener('click', function() {
+                    if (terminalWindow) {
+                        terminalWindow.style.display = 'block';
+                        const terminalInput = document.getElementById('terminal-input');
+                        if (terminalInput) terminalInput.focus();
+                    }
+                });
+            }
+            
+            if (closeTerminalBtn) {
+                closeTerminalBtn.addEventListener('click', function() {
+                    if (terminalWindow) {
+                        terminalWindow.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

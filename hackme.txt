@@ -1,0 +1,97 @@
+==================================
+GUÍA DE HACKEO: EXAMEN DE CIBERSEGURIDAD
+==================================
+
+Este documento contiene comandos y técnicas para hackear el examen de ciberseguridad.
+Comparte solo con fines educativos.
+
+-----------------------------
+COMANDOS DISPONIBLES EN LA TERMINAL KALI
+-----------------------------
+
+Para acceder a la terminal, solo haz clic en la parte que dice "Terminal Kali Linux" en la página de inicio.
+La terminal simula un entorno real de Kali Linux con comandos básicos.
+
+COMANDOS BÁSICOS:
+----------------
+- help               // Muestra todos los comandos disponibles
+- clear              // Limpia la terminal
+- ls                 // Lista archivos y directorios
+- cat [archivo]      // Muestra el contenido de un archivo
+
+COMANDOS DE HACKEO:
+------------------
+- show-users         // Muestra todos los usuarios y contraseñas
+- show-answers       // Muestra todas las respuestas correctas del examen
+- bypass-login [usuario] [contraseña] // Inicia sesión sin validación
+- hack-exam          // Carga directamente el examen con todas las respuestas
+- inject-score [puntuación] // Establece una puntuación personalizada (0-100)
+
+ARCHIVOS OCULTOS DE INTERÉS:
+---------------------------
+- users/usuaerios.json          // Contiene todos los usuarios y contraseñas
+- .hidden-backdoor/exam-answers.txt  // Contiene todas las respuestas correctas
+- .hidden-backdoor/hack-commands.txt // Lista de comandos para hackear
+
+-----------------------------
+EJEMPLOS DE USO
+-----------------------------
+
+1. Ver usuarios y contraseñas:
+   ```
+   show-users
+   ```
+
+2. Ver respuestas correctas:
+   ```
+   show-answers
+   ```
+
+3. Entrar con usuario admin:
+   ```
+   bypass-login admin seguridad2023
+   ```
+
+4. Hacer un examen perfecto automáticamente:
+   ```
+   hack-exam
+   ```
+
+5. Establecer puntuación personalizada:
+   ```
+   inject-score 100
+   ```
+
+6. Ver archivos ocultos:
+   ```
+   cat .hidden-backdoor/hack-commands.txt
+   ```
+
+-----------------------------
+RESPUESTAS CORRECTAS
+-----------------------------
+
+PREGUNTAS DE OPCIÓN MÚLTIPLE:
+- q1: C (White Hat)
+- q2: C (Un intento de engaño mediante ingeniería social)
+- q3: B (Vishing)
+- q4: C (Nmap)
+- q5: C (Cross Site Scripting)
+- q6: B (Interceptar comunicación entre dos dispositivos)
+- q7: B (Google Dorks)
+- q8: B (Protege redes permitiendo o bloqueando tráfico)
+- q9: A (LFI)
+- q10: B (Wireshark)
+- q11: C (Ransomware)
+- q12: C (Fortalecer seguridad de sistemas)
+- q13: C (Reconocimiento)
+- q14: B (Detectar intrusos en la red)
+
+COMANDOS PARA PREGUNTAS DE RESPUESTA CORTA:
+- q15: nmap -sS -p 1-1000 192.168.1.1
+- q16: ifconfig o ip a
+
+==================================
+CREADO POR ELITE PROGRAMMERS GLOBAL
+    ATT: A.HRZ --> Felicidades
+================================== 
