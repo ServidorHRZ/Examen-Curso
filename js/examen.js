@@ -685,12 +685,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="certificate-footer" style="margin-top: 50px; display: flex; justify-content: space-around;">
                 <div class="certificate-signature" style="text-align: center; width: 40%;">
                     <div class="signature-line" style="width: 80%; height: 1px; background-color: #000; margin: 0 auto 10px;"></div>
-                    <p style="margin: 0; font-size: 18px; font-weight: bold;">Andres Hincapie Uriz</p>
+                    <p style="margin: 0; font-size: 18px; font-weight: bold;">Andres Hincapie Ruiz</p>
                     <p style="margin: 5px 0 0; font-size: 14px; color: #555;">Instructor</p>
                 </div>
                 <div class="certificate-signature" style="text-align: center; width: 40%;">
                     <div class="signature-line" style="width: 80%; height: 1px; background-color: #000; margin: 0 auto 10px;"></div>
-                    <p style="margin: 0; font-size: 18px; font-weight: bold;">Andres Hincapie Uriz</p>
+                    <p style="margin: 0; font-size: 18px; font-weight: bold;">Andres Hincapie Ruiz</p>
                     <p style="margin: 5px 0 0; font-size: 14px; color: #555;">Director del Programa</p>
                 </div>
             </div>
